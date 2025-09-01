@@ -1,0 +1,173 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SocialTap — Offline</title>
+  <meta name="description" content="SocialTap is temporarily offline. We'll be back soon." />
+  
+  <link rel="icon" type="image/png" href="st.png" />
+  <style>
+    :root{
+      --bg: #000;
+      --accent: #ff7a00; 
+      --muted: #9a9a9a;
+      --card: #0a0a0a;
+      --max-width: 880px;
+    }
+    html,body{height:100%;}
+    body{
+      margin:0;
+      background:var(--bg);
+      color:#fff;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+      -webkit-font-smoothing:antialiased;
+      -moz-osx-font-smoothing:grayscale;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:32px;
+    }
+
+    .wrap{
+      width:100%;
+      max-width:var(--max-width);
+      text-align:center;
+    }
+
+    /* logo */
+    .logo {
+      display:inline-block;
+      width:120px;
+      height:120px;
+      border-radius:24px;
+      overflow:hidden;
+      box-shadow:0 6px 30px rgba(0,0,0,0.6), inset 0 1px 0 rgba(255,255,255,0.02);
+      background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(0,0,0,0.04));
+      margin:0 auto 22px;
+    }
+    .logo img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+      image-rendering: -webkit-optimize-contrast;
+    }
+
+    h1{
+      margin: 0 0 12px;
+      font-size: clamp(20px, 3.6vw, 32px);
+      letter-spacing: -0.02em;
+      color: #fff;
+    }
+    p.lead{
+      margin:0 auto 22px;
+      color:var(--muted);
+      max-width: 68ch;
+      font-size: clamp(13px, 1.6vw, 16px);
+      line-height:1.5;
+    }
+
+    .card{
+      margin-top:18px;
+      background: linear-gradient(180deg, rgba(255,255,255,0.015), rgba(0,0,0,0.02));
+      border-radius:12px;
+      padding:18px;
+      box-shadow: 0 6px 30px rgba(0,0,0,0.65);
+      display:flex;
+      gap:12px;
+      align-items:center;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      border:0;
+      padding:10px 16px;
+      background:var(--accent);
+      color:#000;
+      font-weight:700;
+      border-radius:999px;
+      text-decoration:none;
+      cursor:pointer;
+      box-shadow: 0 6px 18px rgba(255,122,0,0.12);
+      transition:transform .12s ease, box-shadow .12s ease;
+    }
+    .btn:hover{ transform: translateY(-2px); box-shadow: 0 10px 30px rgba(255,122,0,0.14); }
+    .btn.secondary{
+      background:transparent;
+      color:var(--muted);
+      border:1px solid rgba(255,255,255,0.04);
+      font-weight:600;
+      border-radius:8px;
+      padding:8px 12px;
+    }
+
+    .meta{
+      color:var(--muted);
+      font-size:13px;
+      margin-top:12px;
+    }
+
+    /* small footer */
+    .footer{
+      margin-top:22px;
+      color:var(--muted);
+      font-size:13px;
+      display:flex;
+      gap:10px;
+      justify-content:center;
+      align-items:center;
+      flex-wrap:wrap;
+    }
+
+    /* responsive tweaks */
+    @media (max-width:520px){
+      .logo{ width:88px; height:88px; border-radius:18px; }
+      .card{ padding:14px; gap:8px; }
+      .btn{ padding:10px 12px; font-size:15px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap" role="main" aria-labelledby="title">
+    <div class="logo" aria-hidden="true">
+      
+      <img src="st.png" alt="SocialTap logo" width="512" height="512" />
+    </div>
+
+    <h1 id="title">SocialTap is temporarily unavailable</h1>
+    <p class="lead">
+        The SocialTap servers are temporarily down right now, this usually means our servers have reached the load limit, have crashed (either from an attack or too many connections), or we are working to fix a security vulnerability.
+        SocialTap should be back up soon, and if not you can take a look at our FAQ.
+    </p>
+
+    <div class="card" role="region" aria-label="Actions">
+      <a class="btn" href="https://socialtap.social" aria-label="Retry">
+        ⟳ Retry
+      </a>
+
+      <a class="btn secondary" href="qa.html" target="_blank">
+        Q&A
+      </a>
+
+       <a class="btn secondary" href="mailto:help@socialtap.social?subject=SocialTap%20is%20down">
+        Contact support
+      </a>
+    </div>
+
+    <div class="meta">
+      Thank you for using SocialTap.
+    </div>
+
+    <div class="footer">
+      <span>SocialTap</span>
+      <span>•</span>
+      <a href="https://socialtap.social" style="color:var(--muted); text-decoration:none;">socialtap.social</a>
+    </div>
+  </div>
+</body>
+</html>
